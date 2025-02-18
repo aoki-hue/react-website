@@ -1,0 +1,51 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 72px;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.logo {
+  width: 84px;
+  height: 33px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 0 48px;
+}
+
+.nav ul li:hover {
+  color: var(--red-low-saturation);
+}
+
+.tel {
+  position: relative;
+  padding-left: 48px;
+}
+
+.tel .telIcon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  font-size: 2.4rem;
+  color: var(--white);
+  transform: translateY(-50%) scale(-1, 1);
+  padding: 8px;
+  background-color: var(--red-low-saturation);
+  border-radius: 6px;
+}
+
+.telText {
+  font-size: var(--text-small);
+}
+
+.telNumber {
+  font-size: 2.4rem;
+}
