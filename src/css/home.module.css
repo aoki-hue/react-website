@@ -30,3 +30,28 @@
 .mainVisual_image {
   width: 100%;
 }
+
+/* concept */
+.concept {
+  position: relative;
+  margin: 48px auto 0;
+  max-width: 1136px;
+  width: auto;
+}
+
+.concept .conceptImg {
+  width: 704px;
+}
+
+.concept .conceptTextArea {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 576px;
+  padding: 32px;
+  background-color: var(--white);
+}
+
+.concept .conceptTextArea .conceptText {
+  line-height: 1.5;
+}

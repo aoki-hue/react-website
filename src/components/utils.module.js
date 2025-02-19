@@ -1,19 +1,40 @@
+import React from "react";
+
+/* css */
 import styles from "css/utils.module.css";
 
-const HeadLabel = () => {
+/* fontawesome */
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faScissors, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+/* 見出し -h2 */
+const HeadLabel = ({ title }) => {
   return (
-    <>
-      <h2>見出し2</h2>
-    </>
+    <h2 className={styles.headLabel}>
+      <FontAwesomeIcon icon={faScissors} className={styles.headLabelIcon} />
+      <span className={styles.headLabelText}>{title}</span>
+    </h2>
   );
 };
 
-const Btn = () => {
+/* ボタン */
+const PrimaryBtn = ({ text }) => {
   return (
-    <>
-      <div>ボタン</div>
-    </>
+    <React.Fragment>
+      <div className={styles.primaryBtn}>
+        {text}
+        <FontAwesomeIcon icon={faArrowRight} className={styles.primaryBtnIcon} />
+      </div>
+    </React.Fragment>
   );
 };
 
-export { HeadLabel, Btn };
+/* section */
+const SectionArea = ({ children, background = false }) => {
+  return (
+    <section className={background ? styles.bgContainer : styles.container}>
+      <div className={styles.containerInner}>{children}</div>
+    </section>
+  );
+};
+export { HeadLabel, PrimaryBtn, SectionArea };

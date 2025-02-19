@@ -5,3 +5,73 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
+
+/* 見出し - h2 */
+.headLabel {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 20px;
+  color: var(--gray-violet);
+}
+
+.headLabelIcon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.4rem;
+}
+
+.headLabelText {
+  font-size: 3.2rem;
+}
+
+/* primary btn */
+.primaryBtn {
+  position: relative;
+  width: 208px;
+  background-color: var(--red-low-saturation);
+  text-align: center;
+  color: var(--white);
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.primaryBtn .primaryBtnIcon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+.primaryBtn:hover {
+  background-color: var(--white);
+  border: 2px solid var(--red-low-saturation);
+  color: var(--red-low-saturation);
+}
+
+/* container */
+.container {
+  width: 1136px;
+  margin: 0 auto;
+  padding-top: 72px;
+}
+
+.bgContainer {
+  composes: container;
+  width: 100%;
+  background-color: var(--yellow-thick);
+  padding: 72px 0;
+  margin-top: 72px;
+}
+
+.bgContainer .containerInner {
+  width: 1136px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.bgContainer .headLabel {
+  color: var(--white);
+}

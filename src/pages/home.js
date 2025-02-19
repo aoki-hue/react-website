@@ -1,13 +1,15 @@
 import React from "react";
 
 /* components */
-import { HeadLabel, Btn } from "components/utils.module";
+import { HeadLabel, PrimaryBtn, SectionArea } from "components/utils.module";
+import Menu from "components/menu";
 
 /* css */
 import styles from "css/home.module.css";
 
 /* image */
 import mainVisual from "img/mainVisual.jpg";
+import conceptImg from "img/conceptImg.jpg";
 
 const Home = () => {
   return (
@@ -16,10 +18,24 @@ const Home = () => {
         <p className={styles.mainVisual_text}>-いい感じのテキストが入る-</p>
         <img src={mainVisual} alt="メインビジュアル" className={styles.mainVisual_image}></img>
       </div>
-      <section>
-        <HeadLabel />
-        <Btn />
-      </section>
+      <SectionArea>
+        <HeadLabel title="Concept" />
+        <div className={styles.concept}>
+          <img src={conceptImg} alt="concept" className={styles.conceptImg}></img>
+          <div className={styles.conceptTextArea}>
+            <p className={styles.conceptText}>
+              お客様のトータルビューティーを極め、時代の一歩先をゆく提案をし続ける。
+              <br />
+              地域に根ざし、必要とされるサロン。
+              <br />
+              chimeは、心地よい時間を提供することでお客様の“本当の美”をプロデュースする企業です。
+            </p>
+          </div>
+        </div>
+      </SectionArea>
+      <SectionArea background>
+        <Menu />
+      </SectionArea>
     </React.Fragment>
   );
 };
