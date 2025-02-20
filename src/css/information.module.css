@@ -1,0 +1,64 @@
+.infoArea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 48px 0;
+}
+
+.infoList {
+  position: relative;
+  width: calc((100% - 32px * 3) / 4);
+  border: 1px solid var(--gray-violet);
+}
+
+.infoList::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  content: "お知らせ";
+  text-align: center;
+  color: var(--white);
+  font-size: 1.2rem;
+  width: 72px;
+  padding: 8px 0;
+  background-color: var(--yellow-thick);
+}
+
+.infoWrap {
+  padding: 16px 8px 72px 8px;
+}
+
+.infoThumbnail {
+  width: 100%;
+}
+
+.infoDate {
+  font-size: 1.4rem;
+  color: var(--gray-violet);
+  text-align: right;
+}
+
+.infoDateIcon {
+  margin-right: 8px;
+}
+
+.infoTitle {
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+.infoLink {
+  position: absolute;
+  color: var(--red-low-saturation);
+  right: 8px;
+  bottom: 24px;
+}
+
+.infoLink:hover {
+  color: var(--yellow-thick);
+}
+
+.infoLinkIcon {
+  margin-left: 16px;
+}
