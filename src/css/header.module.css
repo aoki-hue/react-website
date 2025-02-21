@@ -49,3 +49,12 @@
 .telNumber {
   font-size: 2.4rem;
 }
+
+.accordionButton {
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    display: none;
+  }
+}

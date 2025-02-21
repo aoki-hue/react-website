@@ -62,3 +62,18 @@
 .infoLinkIcon {
   margin-left: 16px;
 }
+
+/*====================================================*/
+/* スマホ表示 */
+/*====================================================*/
+
+@media screen and (max-width: 767px) {
+  .infoArea {
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .infoList {
+    width: calc((100% - 16px) / 2);
+  }
+}

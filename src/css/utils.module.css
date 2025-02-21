@@ -75,3 +75,29 @@
 .bgContainer .headLabel {
   color: var(--white);
 }
+
+/*====================================================*/
+/* スマホ表示 */
+/*====================================================*/
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 56px 24px;
+    margin: 0;
+  }
+
+  .bgContainer .containerInner {
+    width: 100%;
+    padding: 0 24px 0;
+    margin: 0;
+  }
+
+  .headLabelText {
+    font-size: 2.8rem;
+  }
+
+  .headLabelIcon {
+    font-size: 2rem;
+  }
+}

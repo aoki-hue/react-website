@@ -28,6 +28,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <div className={styles.accordionButton}>開閉</div>
       <div className={styles.tel}>
         <FontAwesomeIcon icon={faPhoneFlip} className={styles.telIcon} />
         <p className={styles.telText}>お気軽にお電話ください</p>

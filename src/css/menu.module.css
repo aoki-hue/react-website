@@ -32,3 +32,22 @@
 .menuListWrap + .menuListWrap {
   margin-top: 16px;
 }
+
+/*====================================================*/
+/* スマホ表示 */
+/*====================================================*/
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: block;
+    margin: 32px auto;
+  }
+
+  .menuCategory {
+    width: 100%;
+  }
+
+  .menuCategory + .menuCategory {
+    margin-top: 40px;
+  }
+}
