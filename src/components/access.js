@@ -40,9 +40,8 @@ const Access = () => {
             </tr>
           </tbody>
         </table>
-        <img src={storeImage1} alt="店舗1"></img>
+        <img src={storeImage1} alt="店舗1" className={styles.storeImg}></img>
       </div>
-      {/* <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Space+Needle,Seattle+WA"></iframe> */}
     </React.Fragment>
   );
 };

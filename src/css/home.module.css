@@ -80,6 +80,10 @@
     background-color: rgba(255, 255, 255, 0.75);
   }
 
+  .conceptImg {
+    width: 100%;
+  }
+
   .conceptText {
     line-height: 1.75;
   }

@@ -1,3 +1,6 @@
+/* useState */
+import { useState } from "react";
+
 /* link */
 import { Link } from "react-router-dom";
 
@@ -12,10 +15,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneFlip } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  const [navIsOpen, setNavIsOpen] = useState(false);
+
+  const toggleNav = () => {
+    setNavIsOpen((prev) => !prev);
+  };
+
   return (
     <div className={styles.header}>
       <img src={logo} alt="chime" className={styles.logo}></img>
-      <nav className={styles.nav}>
+      <nav className={`${navIsOpen ? styles.open : styles.close} ${styles.nav}`}>
+        <div className={styles.accordionButton} onClick={toggleNav}>
+          開閉
+        </div>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -27,8 +39,9 @@ const Header = () => {
             <Link to="/information">Information</Link>
           </li>
         </ul>
+        {/* <div className={`${navIsOpen ? styles.open : styles.close} ${styles.navBg}`}></div> */}
       </nav>
-      <div className={styles.accordionButton}>開閉</div>
+
       <div className={styles.tel}>
         <FontAwesomeIcon icon={faPhoneFlip} className={styles.telIcon} />
         <p className={styles.telText}>お気軽にお電話ください</p>
