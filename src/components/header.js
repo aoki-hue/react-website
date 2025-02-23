@@ -21,35 +21,61 @@ const Header = () => {
     setNavIsOpen((prev) => !prev);
   };
 
-  return (
-    <div className={styles.header}>
-      <img src={logo} alt="chime" className={styles.logo}></img>
-      <nav className={`${navIsOpen ? styles.open : styles.close} ${styles.nav}`}>
-        <div className={styles.accordionButton} onClick={toggleNav}>
-          開閉
-        </div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/menu">Menu</Link>
-          </li>
-          <li>
-            <Link to="/information">Information</Link>
-          </li>
-        </ul>
-        {/* <div className={`${navIsOpen ? styles.open : styles.close} ${styles.navBg}`}></div> */}
-      </nav>
+  const closeNav = () => {
+    setNavIsOpen(false);
+  };
 
-      <div className={styles.tel}>
-        <FontAwesomeIcon icon={faPhoneFlip} className={styles.telIcon} />
-        <p className={styles.telText}>お気軽にお電話ください</p>
-        <p className={styles.telNumber}>
-          <a href="tel:0000-00-0000">0000-00-0000</a>
-        </p>
+  return (
+    <>
+      <div className={styles.header}>
+        <img src={logo} alt="chime" className={styles.logo}></img>
+        <div className={`${navIsOpen ? styles.open : styles.close} ${styles.accordionButton}`} onClick={toggleNav}>
+          <span className={styles.accordionBar}></span>
+          <span className="sr-only">メニュー</span>
+        </div>
+        <nav className={`${navIsOpen ? styles.open : styles.close} ${styles.nav}`}>
+          {navIsOpen && (
+            <style jsx="true" global="true">
+              {`
+                @media (max-width: 767px) {
+                  body {
+                    overflow: hidden;
+                    position: fixed;
+                    width: 100%;
+                  }
+                }
+              `}
+            </style>
+          )}
+          <ul>
+            <li>
+              <Link to="/" onClick={closeNav}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/menu" onClick={closeNav}>
+                Menu
+              </Link>
+            </li>
+            <li>
+              <Link to="/information" onClick={closeNav}>
+                Information
+              </Link>
+            </li>
+          </ul>
+          <div className={styles.tel}>
+            <FontAwesomeIcon icon={faPhoneFlip} className={styles.telIcon} />
+            <p className={styles.telText}>お気軽にお電話ください</p>
+            <p className={styles.telNumber}>
+              <a href="tel:0000-00-0000">0000-00-0000</a>
+            </p>
+          </div>
+        </nav>
+
+        <div className={`${navIsOpen ? styles.open : styles.close} ${styles.navBg}`}></div>
       </div>
-    </div>
+    </>
   );
 };
 

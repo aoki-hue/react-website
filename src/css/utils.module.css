@@ -51,6 +51,23 @@
   color: var(--red-low-saturation);
 }
 
+/* secondary btn */
+.secondaryBtn {
+  position: relative;
+  width: 208px;
+  background-color: var(--white);
+  border: 2px solid var(--red-low-saturation);
+  text-align: center;
+  color: var(--red-low-saturation);
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.secondaryBtn:hover {
+  background-color: var(--red-low-saturation);
+  color: var(--white);
+}
+
 /* container */
 .container {
   width: 1136px;

@@ -29,6 +29,15 @@ const PrimaryBtn = ({ text }) => {
   );
 };
 
+/* ボタン */
+const SecondaryBtn = ({ text }) => {
+  return (
+    <React.Fragment>
+      <div className={styles.secondaryBtn}>{text}</div>
+    </React.Fragment>
+  );
+};
+
 /* section */
 const SectionArea = ({ children, background = false }) => {
   return (
@@ -37,4 +46,4 @@ const SectionArea = ({ children, background = false }) => {
     </section>
   );
 };
-export { HeadLabel, PrimaryBtn, SectionArea };
+export { HeadLabel, PrimaryBtn, SecondaryBtn, SectionArea };
