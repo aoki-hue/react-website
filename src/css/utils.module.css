@@ -80,13 +80,17 @@
   width: 100%;
   background-color: var(--yellow-thick);
   padding: 72px 0;
-  margin-top: 72px;
+  /* margin-top: 72px; */
 }
 
 .bgContainer .containerInner {
   width: 1136px;
   margin: 0 auto;
   padding: 0;
+}
+
+.container + .container.bgContainer {
+  margin-top: 72px;
 }
 
 .bgContainer .headLabel {

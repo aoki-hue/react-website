@@ -2,8 +2,8 @@
 
 /* pages */
 import Home from "pages/home";
-import Menu from "pages/menu";
-import Info from "pages/information";
+import MenuPage from "pages/menuPage";
+import InfoPage from "pages/informationPage";
 import Error from "pages/404error";
 
 /* components */
@@ -23,8 +23,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/menu" element={<Menu />}></Route>
-          <Route path="/information" element={<Info />}></Route>
+          <Route path="/menu" element={<MenuPage />}></Route>
+          <Route path="/information" element={<InfoPage />}></Route>
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </Layout>

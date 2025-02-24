@@ -1,7 +1,7 @@
 import React from "react";
 
 /* components */
-import { HeadLabel, PrimaryBtn } from "components/utils.module";
+import { HeadLabel } from "components/utils.module";
 
 /* link */
 import { Link } from "react-router-dom";
@@ -107,7 +107,6 @@ const Information = () => {
           </div>
         </li>
       </ul>
-      <PrimaryBtn text="View more" />
     </React.Fragment>
   );
 };

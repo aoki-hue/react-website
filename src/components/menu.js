@@ -1,12 +1,16 @@
 import React from "react";
 
 /* components */
-import { HeadLabel, PrimaryBtn } from "components/utils.module";
+import { HeadLabel } from "components/utils.module";
 
 /* css */
 import styles from "css/menu.module.css";
 
+/* json */
+import MenuList from "json/menu.json";
+
 const Menu = () => {
+  console.log(MenuList.data);
   return (
     <React.Fragment>
       <HeadLabel title="Menu" />
@@ -114,7 +118,6 @@ const Menu = () => {
           </ul>
         </div>
       </div>
-      <PrimaryBtn text="View more" />
     </React.Fragment>
   );
 };

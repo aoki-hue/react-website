@@ -1,13 +1,16 @@
 import React from "react";
 
 /* components */
-import { HeadLabel, SectionArea } from "components/utils.module";
+import { HeadLabel, SectionArea, PrimaryBtn } from "components/utils.module";
 import Menu from "components/menu";
 import Information from "components/information";
 import Access from "components/access";
 
 /* css */
 import styles from "css/home.module.css";
+
+/* link */
+import { Link } from "react-router-dom";
 
 /* image */
 import mainVisual from "img/mainVisual.jpg";
@@ -37,9 +40,15 @@ const Home = () => {
       </SectionArea>
       <SectionArea background>
         <Menu />
+        <Link to="/menu">
+          <PrimaryBtn text="View more" />
+        </Link>
       </SectionArea>
       <SectionArea>
         <Information />
+        <Link to="/information">
+          <PrimaryBtn text="View more" />
+        </Link>
       </SectionArea>
       <SectionArea>
         <Access />
