@@ -1,25 +1,42 @@
-{
-  "data": {
-    "header": {
-      "title": "Reactとメタ言語の比較",
-      "text": "以前作ったメタ言語スターターキットの内容をReact環境で再現してみる"
-    },
-    "main": {
-      "title": "タイトルです",
-      "text": "テキストです。テキストです。テキストですったらテキストです。"
-    },
-    "inner": [
-      {
-        "title": "CSS（文字色）",
-        "text": "CSSでタイトルの文字色変更。"
-      },
-      {
-        "title": "JS（文字列）",
-        "text": "JSでテキストの文字列追加「<span class='inner__text--hello'></span>」"
-      }
-    ],
-    "footer": {
-      "text": "©️ react-from-meta-lang"
-    }
+[
+  {
+    "menuCategory": "Cut",
+    "menuList": [
+      { "menu": "カット&シャンプー", "price": "￥4950" },
+      { "menu": "ポイントカット", "price": "￥1925" },
+      { "menu": "眉カット", "price": "￥770" }
+    ]
+  },
+  {
+    "menuCategory": "Hair Color",
+    "menuList": [
+      { "menu": "単色カラー", "price": "￥6380" },
+      { "menu": "ブリーチ(1回目)", "price": "￥5500" },
+      { "menu": "ブリーチ(2回目)", "price": "￥3300" },
+      { "menu": "眉カラー", "price": "￥1100" }
+    ]
+  },
+  {
+    "menuCategory": "Perm",
+    "menuList": [
+      { "menu": "通常パーマ", "price": "￥6380" },
+      { "menu": "特殊パーマ", "price": "￥9900～" },
+      { "menu": "ポイントパーマ", "price": "￥3300" }
+    ]
+  },
+  {
+    "menuCategory": "縮毛矯正",
+    "menuList": [
+      { "menu": "ポイント縮毛矯正", "price": "￥4400～" },
+      { "menu": "縮毛矯正", "price": "￥11000" }
+    ]
+  },
+  {
+    "menuCategory": "トリートメント・ヘッドスパ",
+    "menuList": [
+      { "menu": "トリートメント", "price": "￥1100" },
+      { "menu": "ヘッドスパ(20分)", "price": "￥2200" },
+      { "menu": "ヘッドスパ(30分)", "price": "￥3300" }
+    ]
   }
-}
+]
