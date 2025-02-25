@@ -5,7 +5,7 @@ import Menu from "components/menu";
 const MenuPage = () => {
   return (
     <SectionArea background>
-      <Menu />
+      <Menu menuPage />
     </SectionArea>
   );
 };

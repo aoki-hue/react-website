@@ -7,116 +7,36 @@ import { HeadLabel } from "components/utils.module";
 import styles from "css/menu.module.css";
 
 /* json */
-import MenuList from "json/menu.json";
+import MenuData from "json/menu.json";
 
-const Menu = () => {
-  console.log(MenuList.data);
+const Menu = ({ menuPage = false }) => {
+  let filteredMenu = [];
+
+  if (menuPage === false) {
+    for (let i = 0; i < 3; i++) {
+      filteredMenu.push(MenuData[i]);
+    }
+  } else {
+    filteredMenu = MenuData;
+  }
+
   return (
     <React.Fragment>
       <HeadLabel title="Menu" />
       <div className={styles.menu}>
-        <div className={styles.menuCategory}>
-          <p className={styles.menuCategoryTitle}>Cut</p>
-          <ul className={styles.menuList}>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.menuCategory}>
-          <p className={styles.menuCategoryTitle}>Cut</p>
-          <ul className={styles.menuList}>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.menuCategory}>
-          <p className={styles.menuCategoryTitle}>Cut</p>
-          <ul className={styles.menuList}>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.menuCategory}>
-          <p className={styles.menuCategoryTitle}>Cut</p>
-          <ul className={styles.menuList}>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.menuCategory}>
-          <p className={styles.menuCategoryTitle}>Cut</p>
-          <ul className={styles.menuList}>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.menuCategory}>
-          <p className={styles.menuCategoryTitle}>Cut</p>
-          <ul className={styles.menuList}>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-            <li className={styles.menuListWrap}>
-              <span className={styles.menuListText}>一般</span>
-              <span className={styles.menuListPrice}>￥4950</span>
-            </li>
-          </ul>
-        </div>
+        {filteredMenu.map((menu) => (
+          <div className={styles.menuCategory}>
+            <p className={styles.menuCategoryTitle}>{menu.menuCategory}</p>
+            <ul className={styles.menuList}>
+              {menu.menuList.map((menu) => (
+                <li className={styles.menuListWrap}>
+                  <span className={styles.menuListText}>{menu.menu}</span>
+                  <span className={styles.menuListPrice}>{menu.price}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </React.Fragment>
   );
