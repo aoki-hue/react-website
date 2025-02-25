@@ -5,7 +5,7 @@ import Information from "components/information";
 const InformationPage = () => {
   return (
     <SectionArea>
-      <Information />
+      <Information informationPage />
     </SectionArea>
   );
 };
