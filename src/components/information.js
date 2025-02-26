@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 /* components */
 import { HeadLabel } from "components/utils.module";
@@ -10,7 +11,7 @@ import { Link } from "react-router-dom";
 import styles from "css/information.module.css";
 
 /* json */
-import informationData from "json/information.json";
+import data from "json/information.json";
 
 /* fontawesome */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,15 +21,25 @@ import { faClock } from "@fortawesome/free-regular-svg-icons";
 /* image */
 import thumbnail01 from "img/thumbnailInfo.jpg";
 
-const Information = ({ informationPage = false }) => {
-  let filteredInformation = [];
+const Information = ({ informationPage = false, checkedValue }) => {
+  let informationData = [];
+  let filteredData = [];
 
   if (informationPage === false) {
     for (let i = 0; i < 8; i++) {
-      filteredInformation.push(informationData[i]);
+      informationData.push(data[i]);
     }
   } else {
-    filteredInformation = informationData;
+    checkedValue.forEach((value) => {
+      filteredData = data.filter((data) => {
+        return data.category.text === value;
+      });
+      console.log(filteredData);
+    });
+
+    // informationData.push(filteredData);
+
+    // informationData = filteredData;
   }
 
   return (
@@ -46,7 +57,7 @@ const Information = ({ informationPage = false }) => {
       </style>
       <HeadLabel title="information" />
       <ul className={styles.infoArea}>
-        {filteredInformation.map((information) => (
+        {informationData.map((information) => (
           <li className={styles.infoList}>
             <span className={`${styles.infoCategory} ${information.category.className}`}>{information.category.text}</span>
             <img src={thumbnail01} alt={information.img.alt} className={styles.infoThumbnail}></img>
