@@ -9,6 +9,7 @@
   position: relative;
   width: calc((100% - 32px * 3) / 4);
   border: 1px solid var(--gray-violet);
+  border-radius: 6px;
 }
 
 .infoCategory {
@@ -21,6 +22,7 @@
   width: 72px;
   padding: 8px 0;
   background-color: var(--yellow-thick);
+  z-index: 1;
 }
 
 .infoWrap {
@@ -29,6 +31,8 @@
 
 .infoThumbnail {
   width: 100%;
+  border-radius: 6px 6px 0 0;
+  filter: grayscale(80%);
 }
 
 .infoDate {
@@ -47,19 +51,23 @@
   margin-top: 16px;
 }
 
-.infoLink {
+.infoRead {
   position: absolute;
   color: var(--red-low-saturation);
   right: 8px;
   bottom: 24px;
 }
 
-.infoLink:hover {
+.infoReadIcon {
+  margin-left: 16px;
+}
+
+.infoLink:hover .infoRead {
   color: var(--yellow-thick);
 }
 
-.infoLinkIcon {
-  margin-left: 16px;
+.infoLink:hover .infoThumbnail {
+  filter: none;
 }
 
 .checkListWrap {
@@ -82,5 +90,9 @@
 
   .infoList {
     width: calc((100% - 16px) / 2);
+  }
+
+  .checkList + .checkList {
+    margin-left: 12px;
   }
 }

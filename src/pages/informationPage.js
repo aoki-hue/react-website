@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 /* components */
-import { SectionArea, Checkbox } from "components/utils.module";
+import { SectionArea, HeadLabel, Checkbox } from "components/utils.module";
 import Information from "components/information";
 
 /* css */
@@ -24,6 +24,7 @@ const InformationPage = () => {
   };
   return (
     <SectionArea>
+      <HeadLabel title="information" />
       <ul className={styles.checkListWrap}>
         <li className={styles.checkList}>
           <Checkbox id="information" name="category" value="お知らせ" onChange={categoryChange} />

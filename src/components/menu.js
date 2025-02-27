@@ -1,8 +1,5 @@
 import React from "react";
 
-/* components */
-import { HeadLabel } from "components/utils.module";
-
 /* css */
 import styles from "css/menu.module.css";
 
@@ -22,14 +19,13 @@ const Menu = ({ menuPage = false }) => {
 
   return (
     <React.Fragment>
-      <HeadLabel title="Menu" />
       <div className={styles.menu}>
         {filteredMenu.map((menu) => (
-          <div className={styles.menuCategory}>
+          <div className={styles.menuCategory} key={menu.id}>
             <p className={styles.menuCategoryTitle}>{menu.menuCategory}</p>
             <ul className={styles.menuList}>
               {menu.menuList.map((menu) => (
-                <li className={styles.menuListWrap}>
+                <li className={styles.menuListWrap} key={menu.id}>
                   <span className={styles.menuListText}>{menu.menu}</span>
                   <span className={styles.menuListPrice}>{menu.price}</span>
                 </li>

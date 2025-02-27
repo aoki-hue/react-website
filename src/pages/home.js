@@ -39,12 +39,14 @@ const Home = () => {
         </div>
       </SectionArea>
       <SectionArea background>
+        <HeadLabel title="menu" />
         <Menu />
         <Link to="/menu">
           <PrimaryBtn text="View more" />
         </Link>
       </SectionArea>
       <SectionArea>
+        <HeadLabel title="information" />
         <Information />
         <Link to="/information">
           <PrimaryBtn text="View more" />

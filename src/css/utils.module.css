@@ -71,15 +71,17 @@
 /* checkbox */
 .checkLabel {
   display: block;
-  padding: 12px 0;
+  padding: 8px 0;
   width: 100px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gray-25);
+  color: var(--gray-25);
   border-radius: 6px;
   text-align: center;
 }
 
 input:checked + .checkLabel {
-  background-color: #ccc;
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
   color: var(--white);
 }
 
@@ -134,5 +136,11 @@ input:checked + .checkLabel {
 
   .headLabelIcon {
     font-size: 2rem;
+  }
+
+  .checkLabel {
+    padding: 4px 0;
+    width: 72px;
+    font-size: 1.4rem;
   }
 }

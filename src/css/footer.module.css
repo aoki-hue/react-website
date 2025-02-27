@@ -14,7 +14,6 @@
 .snsArea .sns {
   position: relative;
   color: var(--white);
-  /* font-size: 1.6rem; */
   width: 48px;
   height: 48px;
   padding: 16px;
@@ -25,6 +24,10 @@
 .snsIcon {
   composes: centering from "css/utils.module.css";
   font-size: 1.6rem;
+}
+
+.snsLink:hover .sns {
+  background-color: var(--yellow-thick);
 }
 
 .copyright {

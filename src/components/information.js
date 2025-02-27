@@ -1,9 +1,6 @@
 import React from "react";
 // import { useState } from "react";
 
-/* components */
-import { HeadLabel } from "components/utils.module";
-
 /* link */
 import { Link } from "react-router-dom";
 
@@ -19,7 +16,8 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 /* image */
-import thumbnail01 from "img/thumbnailInfo.jpg";
+import thumbnail01 from "img/thumbnailInfo1.jpg";
+import thumbnail02 from "img/thumbnailInfo2.jpg";
 
 const Information = ({ informationPage = false, checkedValue }) => {
   let informationData = [];
@@ -42,27 +40,41 @@ const Information = ({ informationPage = false, checkedValue }) => {
     filteredData = data.slice(0, 8);
     informationData = filteredData;
   } else {
-    checkedValue.forEach((value) => {
-      filteredData = data.filter((data) => {
-        return data.category.text === value;
+    if (checkedValue.length === 0) {
+      data.sort((a, b) => {
+        if (a.id > b.id) {
+          return -1;
+        }
+        if (a.id < b.id) {
+          return 1;
+        }
+        return 0;
       });
-      filteredData.forEach((val) => {
-        addArray.push(val);
+
+      informationData = data;
+    } else {
+      checkedValue.forEach((value) => {
+        filteredData = data.filter((data) => {
+          return data.category.text === value;
+        });
+        filteredData.forEach((val) => {
+          addArray.push(val);
+        });
       });
-    });
 
-    // addArrayの順序を降順に
-    addArray.sort((a, b) => {
-      if (a.id > b.id) {
-        return -1;
-      }
-      if (a.id < b.id) {
-        return 1;
-      }
-      return 0;
-    });
+      // addArrayの順序を降順に
+      addArray.sort((a, b) => {
+        if (a.id > b.id) {
+          return -1;
+        }
+        if (a.id < b.id) {
+          return 1;
+        }
+        return 0;
+      });
 
-    informationData = addArray;
+      informationData = addArray;
+    }
   }
 
   return (
@@ -78,23 +90,24 @@ const Information = ({ informationPage = false, checkedValue }) => {
           }
         `}
       </style>
-      <HeadLabel title="information" />
       <ul className={styles.infoArea}>
         {informationData.map((information) => (
-          <li className={styles.infoList}>
-            <span className={`${styles.infoCategory} ${information.category.className}`}>{information.category.text}</span>
-            <img src={thumbnail01} alt={information.img.alt} className={styles.infoThumbnail}></img>
-            <div className={styles.infoWrap}>
-              <p className={styles.infoDate}>
-                <FontAwesomeIcon icon={faClock} className={styles.infoDateIcon} />
-                {information.date}
-              </p>
-              <p className={styles.infoTitle}>{information.title}</p>
-              <Link to={information.url} className={styles.infoLink}>
-                Read more
-                <FontAwesomeIcon icon={faAngleRight} className={styles.infoLinkIcon} />
-              </Link>
-            </div>
+          <li className={styles.infoList} key={information.id}>
+            <Link to={information.url} className={styles.infoLink}>
+              <span className={`${styles.infoCategory} ${information.category.className}`}>{information.category.text}</span>
+              <img src={thumbnail01} alt={information.img.alt} className={styles.infoThumbnail}></img>
+              <div className={styles.infoWrap}>
+                <p className={styles.infoDate}>
+                  <FontAwesomeIcon icon={faClock} className={styles.infoDateIcon} />
+                  {information.date}
+                </p>
+                <p className={styles.infoTitle}>{information.title}</p>
+                <span className={styles.infoRead}>
+                  Read more
+                  <FontAwesomeIcon icon={faAngleRight} className={styles.infoReadIcon} />
+                </span>
+              </div>
+            </Link>
           </li>
         ))}
       </ul>
