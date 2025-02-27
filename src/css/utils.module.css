@@ -68,6 +68,21 @@
   color: var(--white);
 }
 
+/* checkbox */
+.checkLabel {
+  display: block;
+  padding: 12px 0;
+  width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+input:checked + .checkLabel {
+  background-color: #ccc;
+  color: var(--white);
+}
+
 /* container */
 .container {
   width: 1136px;
@@ -80,7 +95,6 @@
   width: 100%;
   background-color: var(--yellow-thick);
   padding: 72px 0;
-  /* margin-top: 72px; */
 }
 
 .bgContainer .containerInner {

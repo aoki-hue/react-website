@@ -49,15 +49,12 @@ const SectionArea = ({ children, background = false }) => {
 
 /* checkbox */
 const Checkbox = ({ id, value, name, onChange }) => {
-  // const [checkedValue, setCheckedValue] = useState("");
-
-  // const categoryChange = () => {
-  //   const checkboxes = document.getElementsByName(`${name}`);
-  // };
   return (
     <React.Fragment>
       <input id={id} type="checkbox" name={name} value={value} onChange={onChange}></input>
-      <label htmlFor={id}>{value}</label>
+      <label htmlFor={id} className={styles.checkLabel}>
+        {value}
+      </label>
     </React.Fragment>
   );
 };

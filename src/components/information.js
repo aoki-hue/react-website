@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 
 /* components */
 import { HeadLabel } from "components/utils.module";
@@ -25,21 +25,44 @@ const Information = ({ informationPage = false, checkedValue }) => {
   let informationData = [];
   let filteredData = [];
 
+  let addArray = [];
+
   if (informationPage === false) {
-    for (let i = 0; i < 8; i++) {
-      informationData.push(data[i]);
-    }
+    // dataの順序を降順に
+    data.sort((a, b) => {
+      if (a.id > b.id) {
+        return -1;
+      }
+      if (a.id < b.id) {
+        return 1;
+      }
+      return 0;
+    });
+
+    filteredData = data.slice(0, 8);
+    informationData = filteredData;
   } else {
     checkedValue.forEach((value) => {
       filteredData = data.filter((data) => {
         return data.category.text === value;
       });
-      console.log(filteredData);
+      filteredData.forEach((val) => {
+        addArray.push(val);
+      });
     });
 
-    // informationData.push(filteredData);
+    // addArrayの順序を降順に
+    addArray.sort((a, b) => {
+      if (a.id > b.id) {
+        return -1;
+      }
+      if (a.id < b.id) {
+        return 1;
+      }
+      return 0;
+    });
 
-    // informationData = filteredData;
+    informationData = addArray;
   }
 
   return (

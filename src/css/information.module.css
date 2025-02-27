@@ -15,7 +15,6 @@
   position: absolute;
   top: 4px;
   left: 4px;
-  /* content: "お知らせ"; */
   text-align: center;
   color: var(--white);
   font-size: 1.2rem;
@@ -61,6 +60,14 @@
 
 .infoLinkIcon {
   margin-left: 16px;
+}
+
+.checkListWrap {
+  display: flex;
+}
+
+.checkList + .checkList {
+  margin-left: 24px;
 }
 
 /*====================================================*/

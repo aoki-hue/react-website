@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "category": {
       "text": "お知らせ",
       "className": "informationLabel"
@@ -10,6 +11,7 @@
     "url": "/page/information/information01.html"
   },
   {
+    "id": 2,
     "category": {
       "text": "ブログ",
       "className": "blogLabel"
@@ -20,6 +22,7 @@
     "url": "/page/information/information02.html"
   },
   {
+    "id": 3,
     "category": {
       "text": "ブログ",
       "className": "blogLabel"
@@ -30,6 +33,7 @@
     "url": "/page/information/information03.html"
   },
   {
+    "id": 4,
     "category": {
       "text": "お知らせ",
       "className": "informationLabel"
@@ -40,6 +44,7 @@
     "url": "/page/information/information04.html"
   },
   {
+    "id": 5,
     "category": {
       "text": "ブログ",
       "className": "blogLabel"
@@ -50,6 +55,7 @@
     "url": "/page/information/information05.html"
   },
   {
+    "id": 6,
     "category": {
       "text": "お知らせ",
       "className": "informationLabel"
@@ -60,6 +66,7 @@
     "url": "/page/information/information06.html"
   },
   {
+    "id": 7,
     "category": {
       "text": "ブログ",
       "className": "blogLabel"
@@ -70,6 +77,7 @@
     "url": "/page/information/information07.html"
   },
   {
+    "id": 8,
     "category": {
       "text": "ブログ",
       "className": "blogLabel"
@@ -80,6 +88,7 @@
     "url": "/page/information/information08.html"
   },
   {
+    "id": 9,
     "category": {
       "text": "お知らせ",
       "className": "informationLabel"
@@ -90,6 +99,7 @@
     "url": "/page/information/information09.html"
   },
   {
+    "id": 10,
     "category": {
       "text": "ブログ",
       "className": "blogLabel"
@@ -100,6 +110,7 @@
     "url": "/page/information/information10.html"
   },
   {
+    "id": 11,
     "category": {
       "text": "ブログ",
       "className": "blogLabel"
@@ -110,6 +121,7 @@
     "url": "/page/information/information11.html"
   },
   {
+    "id": 12,
     "category": {
       "text": "お知らせ",
       "className": "informationLabel"
@@ -120,6 +132,7 @@
     "url": "/page/information/information12.html"
   },
   {
+    "id": 13,
     "category": {
       "text": "ブログ",
       "className": "blogLabel"
@@ -130,6 +143,7 @@
     "url": "/page/information/information13.html"
   },
   {
+    "id": 14,
     "category": {
       "text": "お知らせ",
       "className": "informationLabel"
@@ -140,6 +154,7 @@
     "url": "/page/information/information14.html"
   },
   {
+    "id": 15,
     "category": {
       "text": "ブログ",
       "className": "blogLabel"
@@ -150,6 +165,7 @@
     "url": "/page/information/information15.html"
   },
   {
+    "id": 16,
     "category": {
       "text": "ブログ",
       "className": "blogLabel"

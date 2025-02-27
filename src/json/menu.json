@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "menuCategory": "Cut",
     "menuList": [
       { "menu": "カット&シャンプー", "price": "￥4950" },
@@ -8,6 +9,7 @@
     ]
   },
   {
+    "id": 2,
     "menuCategory": "Hair Color",
     "menuList": [
       { "menu": "単色カラー", "price": "￥6380" },
@@ -17,6 +19,7 @@
     ]
   },
   {
+    "id": 3,
     "menuCategory": "Perm",
     "menuList": [
       { "menu": "通常パーマ", "price": "￥6380" },
@@ -25,6 +28,7 @@
     ]
   },
   {
+    "id": 4,
     "menuCategory": "縮毛矯正",
     "menuList": [
       { "menu": "ポイント縮毛矯正", "price": "￥4400～" },
@@ -32,6 +36,7 @@
     ]
   },
   {
+    "id": 5,
     "menuCategory": "トリートメント・ヘッドスパ",
     "menuList": [
       { "menu": "トリートメント", "price": "￥1100" },

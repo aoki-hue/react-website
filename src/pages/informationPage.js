@@ -4,6 +4,9 @@ import { useState } from "react";
 import { SectionArea, Checkbox } from "components/utils.module";
 import Information from "components/information";
 
+/* css */
+import styles from "css/information.module.css";
+
 const InformationPage = () => {
   const [checkedValue, setCheckedValue] = useState([]);
 
@@ -18,15 +21,14 @@ const InformationPage = () => {
       }
     });
     setCheckedValue(checkedArray);
-    // console.log(checkedValue);
   };
   return (
     <SectionArea>
-      <ul>
-        <li>
+      <ul className={styles.checkListWrap}>
+        <li className={styles.checkList}>
           <Checkbox id="information" name="category" value="お知らせ" onChange={categoryChange} />
         </li>
-        <li>
+        <li className={styles.checkList}>
           <Checkbox id="blog" name="category" value="ブログ" onChange={categoryChange} />
         </li>
       </ul>
