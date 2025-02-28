@@ -1,7 +1,7 @@
 import React from "react";
 
 /* components */
-import { SecondaryBtn } from "components/utils.module";
+import { SecondaryBtn, LinkPageTop } from "components/utils.module";
 
 /* link */
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ const Error = () => {
       <div className={styles.errorNum}>404</div>
       <p className={styles.errorTextLabel}>お探しのページが見つかりませんでした</p>
       <p className={styles.errorText}>下記ボタンから再度アクセスしてください</p>
-      <Link to="/">
+      <Link to="/" onClick={LinkPageTop}>
         <SecondaryBtn text="Topへ戻る" />
       </Link>
     </React.Fragment>

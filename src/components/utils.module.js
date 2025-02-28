@@ -18,10 +18,10 @@ const HeadLabel = ({ title }) => {
 };
 
 /* ボタン */
-const PrimaryBtn = ({ text }) => {
+const PrimaryBtn = ({ text, isBg = false }) => {
   return (
     <React.Fragment>
-      <div className={styles.primaryBtn}>
+      <div className={`${isBg ? styles.bgPrimaryBtn : ""} ${styles.primaryBtn}`}>
         {text}
         <FontAwesomeIcon icon={faArrowRight} className={styles.primaryBtnIcon} />
       </div>
@@ -59,4 +59,11 @@ const Checkbox = ({ id, value, name, onChange }) => {
   );
 };
 
-export { HeadLabel, PrimaryBtn, SecondaryBtn, Checkbox, SectionArea };
+/* ページの上部へ移動（Link） */
+const LinkPageTop = () => {
+  window.scrollTo({
+    top: 0,
+  });
+};
+
+export { HeadLabel, PrimaryBtn, SecondaryBtn, Checkbox, SectionArea, LinkPageTop };

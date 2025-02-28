@@ -14,14 +14,15 @@
 
 .infoCategory {
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 6px;
+  left: 6px;
   text-align: center;
   color: var(--white);
   font-size: 1.2rem;
   width: 72px;
   padding: 8px 0;
   background-color: var(--yellow-thick);
+  border-radius: 3px;
   z-index: 1;
 }
 

@@ -3,11 +3,18 @@ import React from "react";
 /* components */
 import { HeadLabel } from "components/utils.module";
 
+/* swiper */
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+
 /* css */
 import styles from "css/access.module.css";
+import "swiper/css";
 
 /* img */
 import storeImage1 from "img/storeImage1.jpg";
+import storeImage2 from "img/storeImage2.jpg";
+import storeImage3 from "img/storeImage3.jpg";
 
 const Access = () => {
   return (
@@ -40,7 +47,17 @@ const Access = () => {
             </tr>
           </tbody>
         </table>
-        <img src={storeImage1} alt="店舗1" className={styles.storeImg}></img>
+        <Swiper className={styles.swiperWrap} modules={[Autoplay]} autoplay={{ delay: 5000, pauseOnMouseEnter: true, disableOnInteraction: false }} speed={2000} slidesPerView={1} loop={true}>
+          <SwiperSlide>
+            <img src={storeImage1} alt="店舗1" className={styles.storeImg}></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={storeImage2} alt="店舗2" className={styles.storeImg}></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={storeImage3} alt="店舗3" className={styles.storeImg}></img>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </React.Fragment>
   );

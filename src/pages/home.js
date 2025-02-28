@@ -1,7 +1,7 @@
 import React from "react";
 
 /* components */
-import { HeadLabel, SectionArea, PrimaryBtn } from "components/utils.module";
+import { HeadLabel, SectionArea, PrimaryBtn, LinkPageTop } from "components/utils.module";
 import Menu from "components/menu";
 import Information from "components/information";
 import Access from "components/access";
@@ -41,14 +41,14 @@ const Home = () => {
       <SectionArea background>
         <HeadLabel title="menu" />
         <Menu />
-        <Link to="/menu">
-          <PrimaryBtn text="View more" />
+        <Link to="/menu" onClick={LinkPageTop}>
+          <PrimaryBtn text="View more" isBg />
         </Link>
       </SectionArea>
       <SectionArea>
         <HeadLabel title="information" />
         <Information />
-        <Link to="/information">
+        <Link to="/information" onClick={LinkPageTop}>
           <PrimaryBtn text="View more" />
         </Link>
       </SectionArea>
