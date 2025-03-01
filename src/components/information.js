@@ -28,13 +28,7 @@ const Information = ({ informationPage = false, checkedValue }) => {
   if (informationPage === false) {
     // dataの順序を降順に
     data.sort((a, b) => {
-      if (a.id > b.id) {
-        return -1;
-      }
-      if (a.id < b.id) {
-        return 1;
-      }
-      return 0;
+      return b.id - a.id;
     });
 
     filteredData = data.slice(0, 8);
@@ -42,13 +36,7 @@ const Information = ({ informationPage = false, checkedValue }) => {
   } else {
     if (checkedValue.length === 0) {
       data.sort((a, b) => {
-        if (a.id > b.id) {
-          return -1;
-        }
-        if (a.id < b.id) {
-          return 1;
-        }
-        return 0;
+        return b.id - a.id;
       });
 
       informationData = data;
@@ -64,13 +52,7 @@ const Information = ({ informationPage = false, checkedValue }) => {
 
       // addArrayの順序を降順に
       addArray.sort((a, b) => {
-        if (a.id > b.id) {
-          return -1;
-        }
-        if (a.id < b.id) {
-          return 1;
-        }
-        return 0;
+        return b.id - a.id;
       });
 
       informationData = addArray;
