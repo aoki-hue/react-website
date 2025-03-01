@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <div className={styles.mainVisual}>
-        <p className={styles.mainVisual_text}>-いい感じのテキストが入る-</p>
+        <p className={styles.mainVisual_text}>魅力引き出すサロン</p>
         <img src={mainVisual} alt="メインビジュアル" className={styles.mainVisual_image}></img>
       </div>
       <SectionArea>
@@ -29,11 +29,11 @@ const Home = () => {
           <img src={conceptImg} alt="concept" className={styles.conceptImg}></img>
           <div className={styles.conceptTextArea}>
             <p className={styles.conceptText}>
-              お客様のトータルビューティーを極め、時代の一歩先をゆく提案をし続ける。
+              美容室チャイムは、最新の技術と心温まるサービスであなたの魅力を最大限に引き出します。
               <br />
-              地域に根ざし、必要とされるサロン。
+              リラックスできる空間で、美しい髪と心地よい時間をお約束します。
               <br />
-              chimeは、心地よい時間を提供することでお客様の“本当の美”をプロデュースする企業です。
+              ご来店を心よりお待ちしております。
             </p>
           </div>
         </div>

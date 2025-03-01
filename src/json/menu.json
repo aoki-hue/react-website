@@ -29,7 +29,7 @@
   },
   {
     "id": 4,
-    "menuCategory": "縮毛矯正",
+    "menuCategory": "Straight Perm",
     "menuList": [
       { "id": 1, "menu": "ポイント縮毛矯正", "price": "￥4400～" },
       { "id": 2, "menu": "縮毛矯正", "price": "￥11000" }
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "menuCategory": "トリートメント・ヘッドスパ",
+    "menuCategory": "Treatment",
     "menuList": [
       { "id": 1, "menu": "トリートメント", "price": "￥1100" },
       { "id": 2, "menu": "ヘッドスパ(20分)", "price": "￥2200" },

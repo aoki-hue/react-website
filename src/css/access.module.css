@@ -40,11 +40,19 @@
     flex-direction: column-reverse;
     gap: 16px 0;
   }
-  .storeInfo {
+
+  .storeItemLabel {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .storeInfo,
+  .storeImg {
     width: 100%;
   }
 
-  .storeImg {
+  /* slider */
+  .swiperWrap {
     width: 100%;
   }
 }
