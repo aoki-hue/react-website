@@ -147,6 +147,7 @@ a {
  */
 
 abbr[title] {
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted; /* 2 */
 }
 
@@ -230,6 +231,7 @@ optgroup,
 select,
 textarea {
   -webkit-appearance: none; /* 1 */
+  -moz-appearance: none;
   appearance: none;
   vertical-align: middle;
   color: inherit;

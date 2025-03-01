@@ -1,5 +1,7 @@
 .mainVisual {
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -12,7 +14,20 @@
   text-align: center;
   color: var(--white);
   opacity: 0;
+  -webkit-animation: 3s fadeup ease-in-out forwards;
   animation: 3s fadeup ease-in-out forwards;
+}
+
+@-webkit-keyframes fadeup {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeup {
@@ -76,6 +91,8 @@
     transform: translateX(-50%) translateY(-50%);
     width: 90%;
     padding: 16px 24px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     background-color: rgba(255, 255, 255, 0.75);
   }

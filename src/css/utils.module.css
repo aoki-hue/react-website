@@ -9,6 +9,8 @@
 /* 見出し - h2 */
 .headLabel {
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   padding-top: 20px;

@@ -33,6 +33,7 @@
 .infoThumbnail {
   width: 100%;
   border-radius: 6px 6px 0 0;
+  -webkit-filter: grayscale(80%);
   filter: grayscale(80%);
 }
 
@@ -68,6 +69,7 @@
 }
 
 .infoLink:hover .infoThumbnail {
+  -webkit-filter: none;
   filter: none;
 }
 
