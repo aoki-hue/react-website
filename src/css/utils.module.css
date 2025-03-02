@@ -21,7 +21,7 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(-90deg);
   font-size: 2.4rem;
 }
 
@@ -117,6 +117,23 @@ input:checked + .checkLabel {
 
 .bgContainer .headLabel {
   color: var(--white);
+}
+
+/*====================================================*/
+/* 768px - 1136px */
+/*====================================================*/
+@media screen and (min-width: 768px) and (max-width: 1136px) {
+  .container {
+    width: 100%;
+    padding: 72px 48px;
+    margin: 0;
+  }
+
+  .bgContainer .containerInner {
+    width: 100%;
+    /* padding: 0; */
+    margin: 0;
+  }
 }
 
 /*====================================================*/

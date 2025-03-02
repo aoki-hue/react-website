@@ -35,3 +35,5 @@ const Meta = ({ pageTitle, pageDesc }) => {
     </Helmet>
   );
 };
+
+export default Meta;
