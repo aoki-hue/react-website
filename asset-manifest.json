@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-website/static/css/main.37af2ab9.css",
-    "main.js": "/react-website/static/js/main.1755bf8c.js",
+    "main.css": "/react-website/static/css/main.be9f34ff.css",
+    "main.js": "/react-website/static/js/main.fb32017b.js",
     "static/media/mainVisual.jpg": "/react-website/static/media/mainVisual.76813ed7ac17ee85b933.jpg",
     "static/media/storeImage1.jpg": "/react-website/static/media/storeImage1.5b71535f77daa4b8a59d.jpg",
     "static/media/storeImage2.jpg": "/react-website/static/media/storeImage2.24f482d6c1e2e05fbd05.jpg",
@@ -9,13 +9,13 @@
     "static/media/conceptImg.jpg": "/react-website/static/media/conceptImg.758cd730909ba60a8ae3.jpg",
     "static/media/thumbnailInfo2.jpg": "/react-website/static/media/thumbnailInfo2.986a944c536020cd4d6e.jpg",
     "static/media/thumbnailInfo1.jpg": "/react-website/static/media/thumbnailInfo1.6f8850f4c8f5d6bac937.jpg",
-    "static/media/logo.svg": "/react-website/static/media/logo.7dd6c09523b25afe113cb5be67a11672.svg",
+    "static/media/logo.svg": "/react-website/static/media/logo.5a8e7fa6007752beea97c81a3452af87.svg",
     "index.html": "/react-website/index.html",
-    "main.37af2ab9.css.map": "/react-website/static/css/main.37af2ab9.css.map",
-    "main.1755bf8c.js.map": "/react-website/static/js/main.1755bf8c.js.map"
+    "main.be9f34ff.css.map": "/react-website/static/css/main.be9f34ff.css.map",
+    "main.fb32017b.js.map": "/react-website/static/js/main.fb32017b.js.map"
   },
   "entrypoints": [
-    "static/css/main.37af2ab9.css",
-    "static/js/main.1755bf8c.js"
+    "static/css/main.be9f34ff.css",
+    "static/js/main.fb32017b.js"
   ]
 }
