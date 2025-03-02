@@ -5,6 +5,7 @@ import { HeadLabel, SectionArea, PrimaryBtn, LinkPageTop } from "components/util
 import Menu from "components/menu";
 import Information from "components/information";
 import Access from "components/access";
+import Meta from "components/meta";
 
 /* css */
 import styles from "css/home.module.css";
@@ -19,6 +20,7 @@ import conceptImg from "img/conceptImg.jpg";
 const Home = () => {
   return (
     <React.Fragment>
+      <Meta pageTitle="" pageDesc="" />
       <div className={styles.mainVisual}>
         <p className={styles.mainVisual_text}>魅力引き出すサロン</p>
         <img src={mainVisual} alt="メインビジュアル" className={styles.mainVisual_image}></img>

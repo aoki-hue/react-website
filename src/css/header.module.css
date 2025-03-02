@@ -1,5 +1,4 @@
 .header {
-  /* position: absolute; */
   left: 0;
   top: 0;
   width: 100%;
@@ -13,8 +12,8 @@
 }
 
 .logo {
-  width: 84px;
-  height: 33px;
+  width: 112px;
+  height: auto;
 }
 
 .nav ul {
@@ -24,6 +23,7 @@
 
 .nav ul li {
   font-weight: bold;
+  font-size: 2rem;
 }
 
 .nav ul li:hover {
@@ -145,6 +145,7 @@
   .nav ul li {
     position: relative;
     width: 50%;
+    font-size: 1.6rem;
     text-align: center;
     padding: 16px 0;
     border-bottom: 1px solid var(--gray-violet);

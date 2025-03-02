@@ -2,6 +2,7 @@ import React from "react";
 
 /* components */
 import { SecondaryBtn, LinkPageTop } from "components/utils.module";
+import Meta from "components/meta";
 
 /* link */
 import { Link } from "react-router-dom";
@@ -12,6 +13,7 @@ import styles from "css/error.module.css";
 const Error = () => {
   return (
     <React.Fragment>
+      <Meta pageTitle="404" pageDesc="お探しのページが見つかりませんでした" />
       <div className={styles.errorNum}>404</div>
       <p className={styles.errorTextLabel}>お探しのページが見つかりませんでした</p>
       <p className={styles.errorText}>下記ボタンから再度アクセスしてください</p>
